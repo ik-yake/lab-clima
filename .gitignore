@@ -1,0 +1,9 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuración del editor
+.vscode/
+
+# Archivos de configuración con credenciales, si se agregan en el futuro
+# config.js

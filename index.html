@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Consulta el clima actual de ocho ciudades del Perú con Open-Meteo." />
+  <title>Clima Perú | Consulta meteorológica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="encabezado">
+    <span class="etiqueta-superior">LABORATORIO 10 · OPEN-METEO API</span>
+    <h1>Clima Perú</h1>
+    <p>Consulta la temperatura, humedad y viento de distintas ciudades del Perú en tiempo real.</p>
+  </header>
+
+  <main>
+    <section class="panel-consulta" aria-label="Consulta del clima">
+      <label for="selectorCiudad">Selecciona una ciudad</label>
+      <div class="buscador">
+        <select id="selectorCiudad" name="ciudad">
+          <option value="lima">Lima</option>
+          <option value="cusco">Cusco</option>
+          <option value="arequipa">Arequipa</option>
+          <option value="trujillo">Trujillo</option>
+          <option value="piura">Piura</option>
+          <option value="iquitos">Iquitos</option>
+          <option value="puno">Puno</option>
+          <option value="huancayo">Huancayo</option>
+        </select>
+        <button type="button" id="btnConsultar">Ver clima <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+    <p id="mensajeError" class="error" role="alert" aria-live="assertive"></p>
+    <section id="resultado" aria-live="polite" aria-label="Resultado del clima">
+      <div class="estado-inicial">
+        <span class="icono-inicial" aria-hidden="true">☀</span>
+        <h2>Descubre el clima de tu ciudad</h2>
+        <p>Selecciona una ciudad y pulsa «Ver clima» para consultar sus datos actuales.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Información meteorológica proporcionada por <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
